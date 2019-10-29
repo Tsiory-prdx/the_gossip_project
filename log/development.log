@@ -3534,3 +3534,626 @@ Processing by TeamController#show as HTML
 Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 1.1ms | Allocations: 7787)
 
 
+Started GET "/" for 127.0.0.1 at 2019-10-29 11:57:15 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/paradox/.rvm/gems/ruby-2.6.5/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/paradox/.rvm/gems/ruby-2.6.5/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 62.1ms | Allocations: 184)
+Completed 200 OK in 187ms (Views: 64.3ms | ActiveRecord: 0.0ms | Allocations: 918)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 11:57:23 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 35.4ms | Allocations: 1540)
+Completed 200 OK in 340ms (Views: 336.2ms | ActiveRecord: 1.7ms | Allocations: 7838)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 11:57:34 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  Rendered contact/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1134)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2160)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>#OurContact</h1>
+<br>
+<table>
+<thead>
+    <tr>
+        <td>Nom :</td>
+        <td>Prénom :</td>
+        <td>Github :</td>
+        <td>Numero de telephone :</td>
+        <td>Email :</td>
+    </tr>
+  </thead>
+  <tbody>
+<% for index_person in 0 ... @list_person_in_team.size%>
+    
+      <tr>
+          <td>
+         <%= @list_person_in_team[index_person].first_name %>&nbsp;
+          </td>
+          <td>      
+              <%= @list_person_in_team[index_person].last_name %>&nbsp;
+          </td>
+          <td>
+        <%= @list_person_in_team[index_person].url_github %>
+          </td>
+          <td>
+            <%= @list_person_in_team[index_person].phone_number %>&nbsp;
+          </td>
+          <td>
+                <%= @list_person_in_team[index_person].email %>
+          </td>
+          </tr>
+      <% end %>
+    </tbody>
+    </table>
+  <% end %>
+):
+1:    <h1>#OurContact</h1>
+2:    <br>
+3:    <table>
+4:    <thead>
+5:        <tr>
+6:            <td>Nom :</td>
+7:            <td>Prénom :</td>
+8:            <td>Github :</td>
+9:            <td>Numero de telephone :</td>
+10:            <td>Email :</td>
+11:        </tr>
+12:      </thead>
+13:      <tbody>
+14:    <% for index_person in 0 ... @list_person_in_team.size%>
+15:        
+16:          <tr>
+17:              <td>
+18:             <%= @list_person_in_team[index_person].first_name %>&nbsp;
+19:              </td>
+20:              <td>      
+21:                  <%= @list_person_in_team[index_person].last_name %>&nbsp;
+22:              </td>
+23:              <td>
+24:            <%= @list_person_in_team[index_person].url_github %>
+25:              </td>
+26:              <td>
+27:                <%= @list_person_in_team[index_person].phone_number %>&nbsp;
+28:              </td>
+29:              <td>
+30:                    <%= @list_person_in_team[index_person].email %>
+31:              </td>
+32:              </tr>
+33:          <% end %>
+34:        </tbody>
+35:        </table>
+36:      <% end %>
+  
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/contact/show.html.erb:38: syntax error, unexpected end, expecting end-of-input
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 11:58:19 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1598)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 2.0ms | Allocations: 7922)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 11:58:44 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1595)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 1.4ms | Allocations: 7920)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 12:01:09 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (1.0ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1511)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.5ms | Allocations: 7831)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 12:02:41 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1289)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.2ms | Allocations: 6647)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:04:10 +0300
+  [1m[35m (58.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 46.1ms | Allocations: 7697)
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:04:12 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (6.4ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 14.7ms | Allocations: 9398)
+Completed 200 OK in 3086ms (Views: 2996.7ms | ActiveRecord: 8.7ms | Allocations: 1746035)
+
+
+Completed 200 OK in 2394ms (Views: 2385.4ms | ActiveRecord: 8.0ms | Allocations: 1278750)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 12:05:30 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (1.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1536)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 2.0ms | Allocations: 7460)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:05:39 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1279)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.1ms | Allocations: 6665)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:07:04 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (2.0ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 44.2ms | Allocations: 6920)
+Completed 200 OK in 64ms (Views: 42.0ms | ActiveRecord: 18.6ms | Allocations: 12740)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:08:43 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1462)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 1.2ms | Allocations: 7787)
+
+
+Started GET "/contact/show" for 127.0.0.1 at 2019-10-29 12:08:47 +0300
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:14
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/contact/show.html.erb:18
+  Rendered contact/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1513)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.8ms | Allocations: 7403)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:08:48 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1271)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.1ms | Allocations: 6651)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:27:16 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 45.1ms | Allocations: 7697)
+Completed 200 OK in 2128ms (Views: 2027.7ms | ActiveRecord: 8.4ms | Allocations: 1279791)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:27:22 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  Rendered gossip/home.html.erb within layouts/application (Duration: 35.6ms | Allocations: 1742)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 2770)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:           </tr>
+     8:         </thead>
+     9:         <tbody>
+    10:           <% @gossips.each do |g| %>
+    11:           <tr>
+    12:             <td><%= link_to g.title, show_path(p.id) %></td>
+    13:             <td><%= g.user.first_name %></td>
+  
+app/views/gossip/home.html.erb:10
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:29:21 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (29.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  Rendered gossip/home.html.erb within layouts/application (Duration: 52.4ms | Allocations: 6105)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 36.6ms | Allocations: 8997)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     9:         <tbody>
+    10:           <% @gossips.each do |g| %>
+    11:           <tr>
+    12:             <td><%= link_to g.title, show_path(p.id) %></td>
+    13:             <td><%= g.user.first_name %></td>
+    14:           </tr>
+    15:           <% end %>
+  
+app/views/gossip/home.html.erb:12
+app/views/gossip/home.html.erb:10
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:32:47 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  Rendered gossip/home.html.erb within layouts/application (Duration: 260.2ms | Allocations: 29285)
+Completed 200 OK in 1639ms (Views: 1575.5ms | ActiveRecord: 18.5ms | Allocations: 1297306)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:34:16 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (1.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  Rendered gossip/home.html.erb within layouts/application (Duration: 55.7ms | Allocations: 14517)
+Completed 200 OK in 72ms (Views: 64.4ms | ActiveRecord: 6.0ms | Allocations: 20711)
+
+
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:34:18 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 54.9ms | Allocations: 7233)
+Completed 200 OK in 75ms (Views: 62.1ms | ActiveRecord: 10.9ms | Allocations: 14159)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:34:19 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (1.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  Rendered gossip/home.html.erb within layouts/application (Duration: 76.1ms | Allocations: 14418)
+Completed 200 OK in 98ms (Views: 87.4ms | ActiveRecord: 8.8ms | Allocations: 20627)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:34:42 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  Rendered gossip/home.html.erb within layouts/application (Duration: 57.3ms | Allocations: 14550)
+Completed 200 OK in 76ms (Views: 70.2ms | ActiveRecord: 4.3ms | Allocations: 21699)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 12:48:43 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  Rendered gossip/home.html.erb within layouts/application (Duration: 26.0ms | Allocations: 6781)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 6.9ms | Allocations: 10971)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     9:         <tbody>
+    10:           <% @gossips.each do |g| %>
+    11:           <tr>
+    12:             <td><%= link_to p.title, show(p.id) %></td>
+    13:             <td><%= g.user.first_name %></td>
+    14:           </tr>
+    15:           <% end %>
+  
+app/views/gossip/home.html.erb:12
+app/views/gossip/home.html.erb:10
+Started GET "/team/show" for 127.0.0.1 at 2019-10-29 12:55:37 +0300
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+  ↳ app/views/team/show.html.erb:15
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/team/show.html.erb:19
+  Rendered team/show.html.erb within layouts/application (Duration: 27.8ms | Allocations: 7425)
+Completed 200 OK in 1867ms (Views: 1856.6ms | ActiveRecord: 8.4ms | Allocations: 1280031)
+
+
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 13:02:26 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (1.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  Rendered gossip/home.html.erb within layouts/application (Duration: 43.6ms | Allocations: 5595)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.9ms | Allocations: 7807)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     9:         <tbody>
+    10:           <% @gossips.each do |g| %>
+    11:           <tr>
+    12:             <td><%= link_to p.title, show(p.id) %></td>
+    13:             <td><%= g.user.first_name %></td>
+    14:           </tr>
+    15:           <% end %>
+  
+app/views/gossip/home.html.erb:12
+app/views/gossip/home.html.erb:10
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 13:03:30 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  Rendered gossip/home.html.erb within layouts/application (Duration: 247.4ms | Allocations: 87961)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.7ms | Allocations: 89171)
+
+
+  
+ActionView::Template::Error (undefined method `show' for #<#<Class:0x00007f3c4965d420>:0x00007f3c49663ac8>):
+     9:         <tbody>
+    10:           <% @gossips.each do |g| %>
+    11:           <tr>
+    12:             <td><%= link_to g.title, show(g.id) %></td>
+    13:             <td><%= g.user.first_name %></td>
+    14:           </tr>
+    15:           <% end %>
+  
+app/views/gossip/home.html.erb:12
+app/views/gossip/home.html.erb:10
+Started GET "/gossip/home" for 127.0.0.1 at 2019-10-29 13:03:53 +0300
+Processing by GossipController#home as HTML
+  Rendering gossip/home.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/gossip/home.html.erb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/gossip/home.html.erb:13
+  Rendered gossip/home.html.erb within layouts/application (Duration: 97.4ms | Allocations: 26619)
+Completed 200 OK in 119ms (Views: 104.6ms | ActiveRecord: 12.0ms | Allocations: 34564)
+
+

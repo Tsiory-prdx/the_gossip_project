@@ -1,0 +1,17 @@
+ <h1>BIENVENUE SUR THE GOSSIP PROJECT!</h1>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>Les potins</th>
+            <th>Les auteurs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @gossips.each do |g| %>
+          <tr>
+            <td><%= g.title %></td>
+            <td><%= g.user.first_name %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
