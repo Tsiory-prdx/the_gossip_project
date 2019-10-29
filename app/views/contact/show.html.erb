@@ -1,0 +1,14 @@
+<h1>#OurContact</h1>
+<br>
+<% for index_person in 0 ... @list_person_in_team.size%>
+
+  <table>
+    <%= @list_person_in_team[index_person].first_name %>&nbsp;
+      <%= @list_person_in_team[index_person].last_name %>&nbsp;
+        <%= @list_person_in_team[index_person].url_github %>&nbsp;
+            <%= @list_person_in_team[index_person].phone_number %>&nbsp;
+                <%= @list_person_in_team[index_person].email %>
+
+
+  </table>
+  <% end %>

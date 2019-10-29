@@ -1,0 +1,31 @@
+<h1>#OurSuperHyperGigaTEAM</h1>
+<br>
+<h2>All programmers: </h2>
+<br>
+
+  <table>
+  <thead>
+    <tr>
+        <td>Nom :</td>
+        <td>Prénom :</td>
+        <td>Github :</td>
+    </tr>
+  </thead>
+  <tbody>
+<% for index_person in 0 ... @list_person_in_team.size%>
+    
+      <tr>
+          <td>
+              <%= @list_person_in_team[index_person].first_name %>&nbsp;
+          </td>
+          <td>      
+              <%= @list_person_in_team[index_person].last_name %>&nbsp;
+          </td>
+          <td>
+        <%= @list_person_in_team[index_person].url_github %>
+          </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
