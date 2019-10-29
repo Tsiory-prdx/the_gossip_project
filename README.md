@@ -1,24 +1,9 @@
-# README
+# The_gossip_project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Pair-programming
 
-Things you may want to cover:
+### Francois279
 
-* Ruby version
+### Tsiory_prdx
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## First view in our site
