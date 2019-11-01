@@ -1,0 +1,30 @@
+<div class= "container">
+
+    <h1>#LeMondeDesRagotsPotinsBlablablaHouse</h1>
+    <p>Ici, on trouve tous les potins écrits </p>
+    <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Les auteurs des potins</th>
+                    <th>Les potins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @gossips.each do |gosp| %>
+                    <tr>
+                        <td>
+                            <%= link_to "/user/#{gosp.user_id}" do %>
+                                <%= gosp.user.first_name %>
+                            <%end%>
+                        </td>
+                        <td>
+                            <%= link_to "/gossips/#{gosp.user_id}" do %>
+                                <%= gosp.title%>
+                            <%end%>
+                        </td>
+                    </tr>
+                <%end%>
+            </tbody>
+        </table>
+</div>

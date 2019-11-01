@@ -1,0 +1,38 @@
+<div class= "container">
+
+    <h1>#LeMondeDesRagotsPotinsBlablablaHouse</h1>
+    <p>Ici, on trouve tous les potins écrits </p>
+    <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Le auteur du potin</th>
+                    <th>La ville de l'auteur</th>
+                    <th>Le contenus de potin</th>
+                    <th>Le potin</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>
+                            <%= link_to "/user/#{@goss.user_id}" do %>
+                                <%= @goss.user.first_name %>
+                            <%end%>
+                        </td>
+                        <td>
+                            <%=link_to "/city/#{@goss.user.city_id}" do%>
+                                <%= @goss.user.city.name %>
+                            <%end%>
+                        </td>
+                        <td>
+                            <%= @goss.title%>
+                        </td>
+                        <td>
+                            <%= @goss.content %>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+</div>

@@ -1,0 +1,21 @@
+<h1>#UserProfilOf<%=@user.first_name%><%=@user.last_name%></h1>
+
+    <p>
+        Nom: <%=@user.first_name%>
+    </p>
+    <p>  
+        Prenom: <%=@user.last_name%>
+    </p>
+    <p>  
+        Description: <%=@user.description%>
+    </p>
+    <p>  
+        Age: <%=@user.age%> ans
+    </p>
+    <p> 
+        City: <%=link_to "/city/#{@user.city_id}" do%><%=@user.city.name%><%end%>
+    </p>
+    <p>  
+        city zipcode: <%=@user.city.zip_code%> 
+    </p>
+

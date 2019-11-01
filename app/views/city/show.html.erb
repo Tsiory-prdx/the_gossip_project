@@ -1,0 +1,15 @@
+<h1>#MyCity<%= @city.name %></h1>
+
+<h2><%= @city.name %></h2>
+<br>
+<p>Les potins ecrits ici</p>
+<br>
+<ol>
+    <%@city.users.each do |cu|%>
+        <%cu.gossips.each do |cug|%>
+            <li> 
+                Titre: <%= cug.title %> , Contenu: <%= cug.content %>
+            </li>
+        <%end%>
+    <%end%>
+</ol>
